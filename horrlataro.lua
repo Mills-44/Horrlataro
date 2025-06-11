@@ -3,6 +3,8 @@ HORROR = {}
 --Load Lib Files
 SMODS.load_file("lib/game_adds.lua")() -- Definitions 
 SMODS.load_file("lib/utils.lua")() -- Utility functions built
+SMODS.load_file("lib/hooks.lua")() -- Hooks
+SMODS.load_file("lib/ui.lua")() -- UI
 
 Horrlataro = SMODS.current_mod
 
@@ -22,6 +24,7 @@ Horrlataro.Manifest = SMODS.Sticker:extend{
     added = function(self, card) end,
     removed = function(self, card) end,
 }
+
 -- Task Rewards Consumables
 Horrlataro.Task = SMODS.Consumable:extend{
     set = "Task",
@@ -39,3 +42,4 @@ Horrlataro.Task = SMODS.Consumable:extend{
     can_use = function(self, card) return Horrlataro.can_manifest(self, card) end,
     use = function(self, card, area, copier) Horrlataro.manifest(self, card, area, copier) end,
 }
+
