@@ -1,0 +1,16 @@
+{
+	"id": "Horrlataro",
+	"name": "Horrlataro",
+	"display_name": "Horrlataro",
+	"author": ["Mills-44"],
+	"description": "Spooky Scary Skeletons!",
+	"prefix": "horror",
+	"main_file": "horrlataro.lua",
+	"priority": 666,
+	"badge_colour": "af560e",
+	"badge_text_colour": "ffffff",
+	"version": "0.1.0",
+	"dependencies": [
+		"Steamodded (>=1.0.0~BETA-0530b)"
+	]
+}

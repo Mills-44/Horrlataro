@@ -1,0 +1,3 @@
+HORROR.JOKERS = {
+"ghosty"
+}
