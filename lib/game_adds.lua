@@ -1,6 +1,14 @@
 HORROR.JOKERS = {
 "ghosty",
-""
+--"jigsaw",
+--"art",
+--"fred",
+--"it",
+--"mikey",
+--"xeno",
+--"",
+--"",
+--"",
 }
 
 HORROR.TASKS = {
