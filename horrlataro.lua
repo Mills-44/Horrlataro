@@ -4,11 +4,14 @@ HORROR = {}
 SMODS.load_file("lib/game_adds.lua")() -- Definitions 
 SMODS.load_file("lib/utils.lua")() -- Utility functions built
 SMODS.load_file("lib/hooks.lua")() -- Hooks
-SMODS.load_file("lib/ui.lua")() -- UI
+--SMODS.load_file("lib/ui.lua")() -- UI
+--SMODS.load_file("lib/manifest_util.lua")()
 
 Horrlataro = SMODS.current_mod
 
 -- Load Killer Jokers
+HORROR.file_loader(HORROR.JOKERS, "content/jokers")
+-- Load Tasks
 HORROR.file_loader(HORROR.JOKERS, "content/jokers")
 
 -- Manifests Class Creation 

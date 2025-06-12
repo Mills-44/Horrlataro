@@ -1,3 +1,12 @@
 HORROR.JOKERS = {
-"ghosty"
+"ghosty",
+""
+}
+
+HORROR.TASKS = {
+"pop_quiz"
+}
+
+HORROR.MANIFEST = {
+"question_manifest"
 }
