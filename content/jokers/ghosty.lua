@@ -52,10 +52,19 @@ SMODS.Joker {
             }
        end
        if context.end_of_round and context.cardarea == G.jokers then
-        if (pseudorandom('horror_ghosty') < G.GAME.probabilities.tracker / 100 ) then
-            return {
-                
-            }
+        if (pseudorandom('horror_ghosty') < card.ability.extra.tracker / 100 ) then
+             G.E_MANAGER:add_event(Event({
+                trigger = 'after', 
+                delay = 0.4, 
+                func = function()
+                local card = create_card('Task', G.consumeables, nil, nil, nil, nil, nil, 'c_horror_pop_quiz' )       
+                card:add_to_deck()
+                G.consumeables:emplace(card)
+                card:juice_up(0.3, 0.5) 
+        return true
+    end
+    }))
+    card.ability.extra.tracker = 0
         else 
             return {
                 message = "Nope!",

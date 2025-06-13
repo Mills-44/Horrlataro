@@ -1,0 +1,13 @@
+[manifest]
+version = "1.0.0"
+dump_lua = true
+priority = 666
+
+# 
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = 'new_card:set_base(other.config.card)'
+position = "after"
+match_indent = true
+payload = "HORROR.remove_manifest(new_card)"

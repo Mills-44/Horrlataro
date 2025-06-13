@@ -62,6 +62,15 @@ return {
             },
         },
         Other={
+            horror_question_manifest = {
+                name = "Question Mark",
+                text = {
+                    "Scoring hands gain Mult",
+                    "equal to the number",
+                    " of times of poker hand",
+                    "Total {C:mult}+#1#{} Mult",
+                }
+            },
             pop_quiz = {
                 name = "Pop Quiz",
                 text = {
@@ -72,7 +81,7 @@ return {
                     "{C:inactive}Triggers end of round"
                 }
             },
-           game = {
+            game = {
                 name = "Let's Play A Game",
                 text = {
                     "Sell a total of 25 {C:attention}Jokers{}",
@@ -80,20 +89,21 @@ return {
                     "Jokers Sold: {C:green}#1#/25"
                 }
             },
-            float = {
-                name = "You'll Float Too",
-                text = {
-                   "If a {C:attention}2 or 7{} is",
-                   "scored alone or together only",
-                   "have {C:green}1 in 10{} chance",
-                   "to upgrade edition"
-                }
-            }
         },
         Planet={},
         Spectral={},
         Stake={},
         Tag={},
+        Task = {
+            c_horror_pop_quiz = {
+                name = "Pop Quiz",
+                text = {
+                    "Select {C:attention} 1 card",
+                    "to give ",
+                    "{C:attention}Question Manifest"
+                }
+            },
+        },
         Tarot={},
         Voucher={},
     },
@@ -103,9 +113,13 @@ return {
         blind_states={},
         challenge_names={},
         collabs={},
-        dictionary={},
+        dictionary={
+            horror_manifest = "Manifests"
+        },
         high_scores={},
-        labels={},
+        labels={
+            horror_question_manifest = "Manifest",
+        },
         poker_hand_descriptions={},
         poker_hands={},
         quips={},
