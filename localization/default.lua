@@ -8,7 +8,7 @@ return {
            j_horror_ghosty = {
                 name = "Ghosty",
                 text = {
-                    "This Joker gains {C:chips}+5{} Chips",
+                    "This {C:attention}Joker{} gains {C:chips}+5{} Chips",
                     "When played hand contains a {C:attention}Pair{}",
                     "{C:inactive}Total Chips: {C:chips}+#1#{}"
                 }
@@ -16,10 +16,11 @@ return {
             j_horror_jigsaw = {
                 name = "Jigsaw",
                 text = {
-                    "This Joker gains {{X:mult,C:white}X.5{} Mult",
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X.06{} Mult",
                     "for scored {C:attention}6's{} and",
-                    "{C:green}#1# in #2#{} to lose half",
-                    "of money"
+                    "{C:green}1 in #2#{} to lose half",
+                    "of money",
+                    "Total: {X:mult,C:white}X#1#{} Mult"
                 }
             },
             j_horror_it = {
@@ -69,6 +70,22 @@ return {
                     "of poker hand",
                     "{C:green}#1# in 100{}",
                     "{C:inactive}Triggers end of round"
+                }
+            },
+           game = {
+                name = "Let's Play A Game",
+                text = {
+                    "Reach {C:gold}$150{} and",
+                    "create a random {C:legendary}Legendary Joker"
+                }
+            },
+            float = {
+                name = "You'll Float Too",
+                text = {
+                   "If a {C:attention}2 or 7{} is",
+                   "scored alone or together only",
+                   "have {C:green}1 in 10{} chance",
+                   "to upgrade edition"
                 }
             }
         },
