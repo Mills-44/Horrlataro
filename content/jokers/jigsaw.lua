@@ -62,5 +62,22 @@ SMODS.Joker {
                 xmult = card.ability.extra.xmult
             }
         end
+        if context.selling_card and context.cardarea == G.jokers then
+            card.ability.extra.tracker =  card.ability.extra.tracker + 1
+            if  card.ability.extra.tracker == 25 then
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = 0.4,
+                    func = function()
+                        local chosen_joker = pseudorandom_element(HORROR.LEGENDARY_JOKERS_POOL, pseudoseed('choice'))
+                        local game = create_card("Joker", G.jokers, nil, nil, nil, nil, 'j_'.. chosen_joker)
+                        game:add_to_deck()
+                        G.jokers:emplace(game)
+                        card:juice_up(0.3, 0.5)
+                        return true
+                    end
+                }))
+            end
+        end
     end
 }

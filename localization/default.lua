@@ -75,8 +75,9 @@ return {
            game = {
                 name = "Let's Play A Game",
                 text = {
-                    "Reach {C:gold}$150{} and",
-                    "create a random {C:legendary}Legendary Joker"
+                    "Sell a total of 25 {C:attention}Jokers{}",
+                    "create a random {C:legendary}Legendary Joker",
+                    "Jokers Sold: {C:green}#1#/25"
                 }
             },
             float = {

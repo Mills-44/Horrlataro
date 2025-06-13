@@ -18,3 +18,11 @@ HORROR.TASKS = {
 HORROR.MANIFEST = {
 "question_manifest"
 }
+
+HORROR.LEGENDARY_JOKERS_POOL = {
+    "perkeo",
+    "canio",
+    "yorick",
+    "triboulet",
+    "chicot"
+}
