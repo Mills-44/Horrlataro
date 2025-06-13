@@ -8,7 +8,7 @@ return {
            j_horror_ghosty = {
                 name = "Ghosty",
                 text = {
-                    "This Joker gains {C:chips}+5{} Chips",
+                    "This {C:attention}Joker{} gains {C:chips}+5{} Chips",
                     "When played hand contains a {C:attention}Pair{}",
                     "{C:inactive}Total Chips: {C:chips}+#1#{}"
                 }
@@ -16,10 +16,11 @@ return {
             j_horror_jigsaw = {
                 name = "Jigsaw",
                 text = {
-                    "This Joker gains {{X:mult,C:white}X.5{} Mult",
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X.06{} Mult",
                     "for scored {C:attention}6's{} and",
-                    "{C:green}#1# in #2#{} to lose half",
-                    "of money"
+                    "{C:green}1 in #2#{} to lose half",
+                    "of money",
+                    "Total: {X:mult,C:white}X#1#{} Mult"
                 }
             },
             j_horror_it = {
@@ -61,6 +62,15 @@ return {
             },
         },
         Other={
+            horror_question_manifest = {
+                name = "Question Mark",
+                text = {
+                    "Scoring hands gain Mult",
+                    "equal to the number",
+                    " of times of poker hand",
+                    "Total {C:mult}+#1#{} Mult",
+                }
+            },
             pop_quiz = {
                 name = "Pop Quiz",
                 text = {
@@ -70,12 +80,30 @@ return {
                     "{C:green}#1# in 100{}",
                     "{C:inactive}Triggers end of round"
                 }
-            }
+            },
+            game = {
+                name = "Let's Play A Game",
+                text = {
+                    "Sell a total of 25 {C:attention}Jokers{}",
+                    "create a random {C:legendary}Legendary Joker",
+                    "Jokers Sold: {C:green}#1#/25"
+                }
+            },
         },
         Planet={},
         Spectral={},
         Stake={},
         Tag={},
+        Task = {
+            c_horror_pop_quiz = {
+                name = "Pop Quiz",
+                text = {
+                    "Select {C:attention} 1 card",
+                    "to give ",
+                    "{C:attention}Question Manifest"
+                }
+            },
+        },
         Tarot={},
         Voucher={},
     },
@@ -85,9 +113,13 @@ return {
         blind_states={},
         challenge_names={},
         collabs={},
-        dictionary={},
+        dictionary={
+            horror_manifest = "Manifests"
+        },
         high_scores={},
-        labels={},
+        labels={
+            horror_question_manifest = "Manifest",
+        },
         poker_hand_descriptions={},
         poker_hands={},
         quips={},

@@ -1,48 +1,37 @@
 HORROR = {}
 
+Horrlataro = SMODS.current_mod
+Horrlataro_path = SMODS.current_mod.path
+
 --Load Lib Files
 SMODS.load_file("lib/game_adds.lua")() -- Definitions 
 SMODS.load_file("lib/utils.lua")() -- Utility functions built
 SMODS.load_file("lib/hooks.lua")() -- Hooks
---SMODS.load_file("lib/ui.lua")() -- UI
---SMODS.load_file("lib/manifest_util.lua")()
+SMODS.load_file("lib/ui.lua")() -- UI
+SMODS.load_file("lib/manifest_util.lua")()
+SMODS.load_file("lib/pools.lua")()
 
-Horrlataro = SMODS.current_mod
+-- Lovely Fixes
+SMODS.load_file("lovely/fixes.toml")
 
 -- Load Killer Jokers
 HORROR.file_loader(HORROR.JOKERS, "content/jokers")
--- Load Tasks
-HORROR.file_loader(HORROR.JOKERS, "content/jokers")
+HORROR.file_loader(HORROR.TASKS, "content/tasks")
+HORROR.file_loader(HORROR.MANIFESTS, "content/manifests")
 
--- Manifests Class Creation 
-Horrlataro.Manifest = SMODS.Sticker:extend{
-    rate = 0.0,
-    should_apply = false,
-    prefix_config = { key = false },
-    card_compat = true,
-    draw = function(self, card) -- No Shine
-		G.shared_stickers[self.key].role.draw_major = card
-		G.shared_stickers[self.key]:draw_shader("dissolve", nil, nil, nil, card.children.center)
-	end,
-    added = function(self, card) end,
-    removed = function(self, card) end,
-}
-
--- Task Rewards Consumables
-Horrlataro.Task = SMODS.Consumable:extend{
-    set = "Task",
-    discovered = false,
-	should_apply = false,
-	cost = 3,
-    config = { 
-        max_highlighted = 1, 
-        sticker_id = "no_manifest" 
+-- Task Consumable Type
+SMODS.ConsumableType{
+	key = "Task",
+    primary_colour = HEX("0f6c09"),
+    secondary_colour = HEX("0f6c09"),
+    collection_rows = { 4, 4 },
+    shop_rate = 0.0,
+    loc_txt = {
+        collection = "Task Cards",
+        name = "Task",
+        label = "Task",
     },
-    loc_vars = function(self, info_queue)
-        info_queue[#info_queue + 1] = { key = self.config.sticker_id, set = "Other", vars = {} }
-        return { vars = { self.config.max_highlighted } }
-    end,
-    can_use = function(self, card) return Horrlataro.can_manifest(self, card) end,
-    use = function(self, card, area, copier) Horrlataro.manifest(self, card, area, copier) end,
+    default = "c_horror_pop_quiz",
+    can_stack = true,
+    can_divide = true
 }
-
