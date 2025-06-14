@@ -3,7 +3,7 @@
 	"name": "Horrlataro",
 	"display_name": "Horrlataro",
 	"author": ["Mills-44"],
-	"description": "Spooky Scary Skeletons!",
+	"description": "A deadly edition to the game!",
 	"prefix": "horror",
 	"main_file": "horrlataro.lua",
 	"priority": 666,
