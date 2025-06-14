@@ -6,6 +6,21 @@ SMODS.Atlas {
     py   = 95, 
   }
 
+HORROR.GHOSTY_JOKER = {
+    "scary_movie",
+    "favorite_movie",
+    "where_am_i"
+}
+
+for _, key in ipairs(HORROR.GHOSTY_JOKER) do
+SMODS.Sound {
+    key  = key, 
+    path = key .. '.ogg', 
+    volume = 1.5, 
+    pitch = 1.0 
+}
+end
+
 SMODS.Joker {
     key = 'ghosty',
     atlas = 'ghosty',
@@ -46,6 +61,13 @@ SMODS.Joker {
             card.ability.extra.tracker = card.ability.extra.tracker + poker_hand_times
             if next(context.poker_hands['Pair']) then
                 card.ability.extra.chips = card.ability.extra.chips + 5
+            end
+            if HORROR.random_chance(.33) then
+                play_sound('horror_scary_movie')
+            elseif HORROR.random_chance(.66) then
+                play_sound('horror_favorite_movie')
+            else
+                play_sound('horror_where_am_i')
             end
             return {
                 chips = card.ability.extra.chips 

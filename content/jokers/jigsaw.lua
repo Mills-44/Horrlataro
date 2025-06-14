@@ -6,6 +6,13 @@ SMODS.Atlas {
     py   = 95, 
   }
 
+  SMODS.Sound {
+    key  = 'jigsaw_laugh', 
+    path = 'jigsaw_laugh.ogg', 
+    volume = 1.0, 
+    pitch = 1.0 
+}
+
 SMODS.Joker {
     key = 'jigsaw',
     atlas = 'jigsaw',
@@ -30,7 +37,7 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue+1] = {
             set = 'Other',
-            key = 'game_over',
+            key = 'game',
             vars = {
               card.ability.extra.tracker
             }
@@ -44,16 +51,17 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play then
-            for i, k in ipairs(context.scoring_hand) do
+            local xmult_bonus = 0
                 if context.other_card:get_id() == 6 then
-                    card.ability.extra.xmult = card.ability.extra.xmult + .5
+                    xmult_bonus = xmult_bonus + .06 
                     if (pseudorandom('horror_jigsaw') < 1 / 6 ) then
-                        ease_dollars(math.max(0,math.min((G.GAME.dollars * .5))))
-                    end
+                        ease_dollars(-(math.max(0,math.min((G.GAME.dollars * .5)))))
+                        play_sound('horror_jigsaw_laugh')
                 end
             end
+            card.ability.extra.xmult = card.ability.extra.xmult +  xmult_bonus
             return {
-                message = "+X.5!",
+                message = "+X.06!",
                 colours = G.C.MULT
             }
         end
@@ -64,7 +72,7 @@ SMODS.Joker {
         end
         if context.selling_card and context.cardarea == G.jokers then
             card.ability.extra.tracker =  card.ability.extra.tracker + 1
-            if  card.ability.extra.tracker == 25 then
+            if card.ability.extra.tracker == 25 then
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after',
                     delay = 0.4,
@@ -77,6 +85,7 @@ SMODS.Joker {
                         return true
                     end
                 }))
+                 card.ability.extra.tracker = 0
             end
         end
     end
