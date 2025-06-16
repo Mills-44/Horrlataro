@@ -13,6 +13,14 @@ return {
                     "{C:inactive}Total Chips: {C:chips}+#1#{}"
                 }
             },
+            j_horror_jay_bird = {
+                name = "Jay Bird",
+                text = {
+                    "This {C:attention}Joker{} gives {C:mult}+#1#{} Mult",
+                    "for a scored {C:attention}10 and 3{} or",
+                    "{C:chips}+#2#{} Chips for a scored {C:attention}6's"
+                }
+            },
             j_horror_jigsaw = {
                 name = "Jigsaw",
                 text = {
@@ -31,6 +39,16 @@ return {
                     "{C:attention}#1#{} times"
                 }
             },
+            j_horror_quiet = {
+                name = "Quiet",
+                text = {
+                    "{X:mult,C:white}-X#1#{} Mult for each scored",
+                    "card in played hands",
+                    "Total: {X:mult,C:white}X#2#{} Mult"
+                }
+            },
+
+
             j_horror_xeno = {
                 name = "Xeno",
                 text = {
@@ -90,12 +108,27 @@ return {
                     "Jokers Sold: {C:green}#1#/25"
                 }
             },
-            float = {
+            counselor = {
+                name = "Counselor Hunt",
+                text = {
+                    "Find {C:attention}Lusty Joker{}",
+                    "Create a random", 
+                    "{C:attention}Crystal Lake Joker{}"
+                }
+            },
+             float = {
                 name = "You'll Float Too",
                 text = {
                     "Skip a total of 5 {C:attention}Blinds",
-                    "Add 2 retriggers to scored {C:hearts}Hearts{}"
+                    "Add 2 retriggers to scored {C:hearts}Hearts{}",
                     "Skips left until triggered: {C:attention}#1#{}"
+                }
+            },
+            tiptoe = {
+                name = "Tiptoe",
+                text = {
+                    "Play each rank as a high card",
+                    ""
                 }
             },
         },

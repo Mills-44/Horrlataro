@@ -19,8 +19,8 @@ SMODS.Joker {
         retrig  = 1,
         },
     },
-    rarity = 2,
-    cost = 6,
+    rarity = 3,
+    cost = 8,
     unlocked = true,
     discovered = false, 
     blueprint_compat = true,
@@ -41,12 +41,10 @@ SMODS.Joker {
         }  
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and context.other_card:is_suit("Hearts") then
-            if context.repetition then
+        if  context.repetition and context.cardarea == G.play and context.other_card:is_suit("Hearts") then
                 return {
                     repetitions = card.ability.extra.retrig
                 }
-            end
         end
         if context.skip_blind then
             card.ability.extra.tracker = card.ability.extra.tracker - 1
