@@ -1,7 +1,10 @@
 HORROR = {}
 
 Horrlataro = SMODS.current_mod
+Horrlataro_config = Horrlataro.config
+Horrlataro.enabled = copy_table(Horrlataro_config)
 Horrlataro_path = SMODS.current_mod.path
+
 
 --Load Lib Files
 SMODS.load_file("lib/game_adds.lua")() -- Definitions 

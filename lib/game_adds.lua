@@ -1,7 +1,11 @@
+HORROR.config = SMODS.current_mod.config
+
 HORROR.JOKERS = {
 "ghosty",
 "jigsaw",
 "jay_bird",
+"penny",
+--"quiet",
 --"fred",
 --"it",
 --"mikey",

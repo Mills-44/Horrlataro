@@ -31,13 +31,24 @@ return {
                     "Total: {X:mult,C:white}X#1#{} Mult"
                 }
             },
-            j_horror_it = {
-                name = "IT",
+            j_horror_penny = {
+                name = "Penny",
                 text = {
                     "Retrigger any {C:hearts}Hearts{}",
-                    "card scored"
+                    "card scored an additional",
+                    "{C:attention}#1#{} times"
                 }
             },
+            j_horror_quiet = {
+                name = "Quiet",
+                text = {
+                    "{X:mult,C:white}-X#1#{} Mult for each scored",
+                    "card in played hands",
+                    "Total: {X:mult,C:white}X#2#{} Mult"
+                }
+            },
+
+
             j_horror_xeno = {
                 name = "Xeno",
                 text = {
@@ -103,6 +114,21 @@ return {
                     "Find {C:attention}Lusty Joker{}",
                     "Create a random", 
                     "{C:attention}Crystal Lake Joker{}"
+                }
+            },
+             float = {
+                name = "You'll Float Too",
+                text = {
+                    "Skip a total of 5 {C:attention}Blinds",
+                    "Add 2 retriggers to scored {C:hearts}Hearts{}",
+                    "Skips left until triggered: {C:attention}#1#{}"
+                }
+            },
+            tiptoe = {
+                name = "Tiptoe",
+                text = {
+                    "Play each rank as a high card",
+                    ""
                 }
             },
         },
