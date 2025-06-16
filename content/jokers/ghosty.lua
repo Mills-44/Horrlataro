@@ -69,9 +69,6 @@ SMODS.Joker {
             else
                 play_sound('horror_where_am_i')
             end
-            return {
-                chips = card.ability.extra.chips 
-            }
        end
        if context.end_of_round and context.cardarea == G.jokers then
         if (pseudorandom('horror_ghosty') < card.ability.extra.tracker / 100 ) then

@@ -58,12 +58,12 @@ SMODS.Joker {
                         ease_dollars(-(math.max(0,math.min((G.GAME.dollars * .5)))))
                         play_sound('horror_jigsaw_laugh')
                 end
-            end
-            card.ability.extra.xmult = card.ability.extra.xmult +  xmult_bonus
-            return {
+                return {
                 message = "+X.06!",
                 colours = G.C.MULT
-            }
+                }
+            end
+            card.ability.extra.xmult = card.ability.extra.xmult +  xmult_bonus
         end
         if context.joker_main then
             return {

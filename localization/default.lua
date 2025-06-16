@@ -13,6 +13,14 @@ return {
                     "{C:inactive}Total Chips: {C:chips}+#1#{}"
                 }
             },
+            j_horror_jay_bird = {
+                name = "Jay Bird",
+                text = {
+                    "This {C:attention}Joker{} gives {C:mult}+#1#{} Mult",
+                    "for a scored {C:attention}10 and 3{} or",
+                    "{C:chips}+#2#{} Chips for a scored {C:attention}6's"
+                }
+            },
             j_horror_jigsaw = {
                 name = "Jigsaw",
                 text = {
@@ -87,6 +95,14 @@ return {
                     "Sell a total of 25 {C:attention}Jokers{}",
                     "create a random {C:legendary}Legendary Joker",
                     "Jokers Sold: {C:green}#1#/25"
+                }
+            },
+            counselor = {
+                name = "Counselor Hunt",
+                text = {
+                    "Find {C:attention}Lusty Joker{}",
+                    "Create a random", 
+                    "{C:attention}Crystal Lake Joker{}"
                 }
             },
         },
