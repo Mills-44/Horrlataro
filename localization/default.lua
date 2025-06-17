@@ -47,8 +47,6 @@ return {
                     "Total: {X:mult,C:white}X#2#{} Mult"
                 }
             },
-
-
             j_horror_xeno = {
                 name = "Xeno",
                 text = {
@@ -56,6 +54,8 @@ return {
                     "they turn into {C:attention}K's{} "
                 }
             },
+
+            
             j_horror_mikey = {
                 name = "Mikey",
                 text = {
@@ -130,6 +130,14 @@ return {
                     "Beat {C:attention}#1# Blinds",
                     "with one scoring hand",
                     "{C:attention}+1 Joker{} slot once 0"
+                }
+            },
+            chest = {
+                name = "Chest Popper",
+                text = {
+                    "Play a {C:attention}Five of a Kind{}",
+                    "with {C:attention}K's{} of all the same suit"
+                    "Creates either {C:attention}Baron or DNA Joker"
                 }
             },
         },
