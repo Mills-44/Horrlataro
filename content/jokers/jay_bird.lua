@@ -57,6 +57,7 @@ SMODS.Joker {
 				end
 			end
 			if has_three_ten > 1 then
+                play_sound('horror_jason')
 				return { 
                     mult = card.ability.extra.mult,
                     card = card

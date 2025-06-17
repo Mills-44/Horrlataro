@@ -28,3 +28,8 @@ HORROR.JASON_JOKERS = {
 HORROR.lusty_checker = {
   j_lusty_joker = true,
 }
+
+HORROR.XENO = {
+    "baron",
+    "dna",
+}
