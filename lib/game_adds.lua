@@ -5,7 +5,7 @@ HORROR.JOKERS = {
 "jigsaw",
 "jay_bird",
 "penny",
---"quiet",
+"quiet",
 --"fred",
 --"it",
 --"mikey",

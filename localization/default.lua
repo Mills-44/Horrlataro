@@ -127,8 +127,9 @@ return {
             tiptoe = {
                 name = "Tiptoe",
                 text = {
-                    "Play each rank as a high card",
-                    ""
+                    "Beat {C:attention}#1# Blinds",
+                    "with one scoring hand",
+                    "{C:attention}+1 Joker{} slot once 0"
                 }
             },
         },
