@@ -6,6 +6,13 @@ SMODS.Atlas {
     py   = 95, 
   }
 
+SMODS.Sound {
+    key  = 'alien', 
+    path = 'alien.ogg', 
+    volume = 1.0, 
+    pitch = 1.0 
+}
+
 SMODS.Joker {
     key = 'xeno',
     atlas = 'xeno',
@@ -39,6 +46,17 @@ SMODS.Joker {
         end
          if context.before then
              if next(context.poker_hands['Flush Five']) then
+                play_sound('horror_alien')
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after', 
+                    delay = 0.4, 
+                    func = function()
+                        card:flip()
+                        card:juice_up(.3,.5)
+                        card:flip()
+                return true
+                end
+            }))
                      G.E_MANAGER:add_event(Event({
                         trigger = 'after', 
                         delay = 0.4, 

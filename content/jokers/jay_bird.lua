@@ -6,7 +6,7 @@ SMODS.Atlas {
     py   = 95, 
   }
 
-  SMODS.Sound {
+SMODS.Sound {
     key  = 'jason', 
     path = 'jason.ogg', 
     volume = 1.0, 

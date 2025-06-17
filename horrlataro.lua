@@ -38,3 +38,10 @@ SMODS.ConsumableType{
     can_stack = true,
     can_divide = true
 }
+
+SMODS.Atlas {
+    key  = 'modicon',
+    path = 'modicon.png',
+    px   = 32, 
+    py   = 32, 
+  }
