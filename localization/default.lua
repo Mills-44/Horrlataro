@@ -55,7 +55,7 @@ return {
                 }
             },
 
-            
+
             j_horror_mikey = {
                 name = "Mikey",
                 text = {
@@ -84,9 +84,9 @@ return {
             horror_question_manifest = {
                 name = "Question Mark",
                 text = {
-                    "Scoring hands gain Mult",
-                    "equal to the number",
-                    " of times of poker hand",
+                    "Gain Mult equal ",
+                    "to the number of",
+                    "times of poker hand",
                     "Total {C:mult}+#1#{} Mult",
                 }
             },
@@ -127,15 +127,15 @@ return {
             tiptoe = {
                 name = "Tiptoe",
                 text = {
-                    "Play each rank as a high card",
-                    ""
+                    "Beat {C:attention}#1# Blinds",
+                    "with one scoring hand",
+                    "{C:attention}+1 Joker{} slot"
                 }
             },
             chest = {
                 name = "Chest Popper",
                 text = {
-                    "Play a {C:attention}Five of a Kind{}",
-                    "with {C:attention}K's{} of all the same suit"
+                    "Play a {C:attention}Flush Five{}",
                     "Creates either {C:attention}Baron or DNA Joker"
                 }
             },

@@ -5,14 +5,8 @@ HORROR.JOKERS = {
 "jigsaw",
 "jay_bird",
 "penny",
---"quiet",
---"fred",
---"it",
---"mikey",
---"xeno",
---"",
---"",
---"",
+"quiet",
+"xeno",
 }
 
 -- Manifests Class Creation 

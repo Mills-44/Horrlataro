@@ -17,6 +17,7 @@ SMODS.Joker {
         extra = {
             xmult = 5,
             xmult_lose = 1,
+            blind_left = 4,
         },
     },
     rarity = 2,
@@ -31,7 +32,8 @@ SMODS.Joker {
             set = 'Other',
             key = 'tiptoe',
             vars = {
-            }
+                card.ability.extra.blind_left
+                }
         }
         return {
             vars = {
@@ -56,5 +58,13 @@ SMODS.Joker {
         if context.after then
          card.ability.extra.xmult = 5
         end
-    end
+        if context.end_of_round and context.cardarea == G.jokers then
+            if G.GAME.current_round.hands_left == 3 or 4 then
+                card.ability.extra.blind_left = card.ability.extra.blind_left - 1
+                if card.ability.extra.blind_left == 0 then
+                    G.jokers.config.card_limit = G.jokers.config.card_limit + 1
+                end
+            end
+        end
+end
 }
