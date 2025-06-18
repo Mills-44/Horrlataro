@@ -47,16 +47,17 @@ SMODS.Joker {
         }  
     end,
     calculate = function(self, card, context)
-        local has_three_ten = 0
+        local has_three = 0
+        local has_ten = 0
         if context.joker_main then
 			for i = 1, #context.full_hand do
 				if context.full_hand[i]:get_id() == 3 then
-					has_three_ten = has_three_ten + 1
+					has_three = has_three + 1
 				elseif context.full_hand[i]:get_id() == 10 then
-					has_three_ten = has_three_ten + 1
+					has_ten = has_ten + 1
 				end
 			end
-			if has_three_ten > 1 then
+			if has_three > 0 and has_ten > 0 then
                 play_sound('horror_jason')
 				return { 
                     mult = card.ability.extra.mult,

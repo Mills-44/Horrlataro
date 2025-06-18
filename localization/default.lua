@@ -5,6 +5,14 @@ return {
         Edition={},
         Enhanced={},
         Joker={
+            j_horror_christy = {
+                name = "Christy",
+                text = {
+                    "{C:mult}+#1#{} Mult for each consecutive hand",
+                    "discarding {C:hearts}Hearts{} cards resets it",
+                    "Currently: {C:mult}+#2#{} Mult"
+                }
+            },
            j_horror_ghosty = {
                 name = "Ghosty",
                 text = {
@@ -137,6 +145,14 @@ return {
                 text = {
                     "Play a {C:attention}Flush Five{}",
                     "Creates either {C:attention}Baron or DNA Joker"
+                }
+            },
+            auto = {
+                name = "Auto Vengence",
+                text = {
+                    "Reach {C:mult}+#1#{} Mult and",
+                    "Turn a random {C:attention}Joker{}",
+                    "{C:dark_edition}Negative{} if possible"
                 }
             },
         },
