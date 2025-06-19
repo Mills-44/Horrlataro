@@ -5,12 +5,36 @@ return {
         Edition={},
         Enhanced={},
         Joker={
-            j_horror_christy = {
-                name = "Christy",
+             j_horror_am = {
+                name = "AM",
+                text = {
+                    "After selecting a {C:attention}Blind{}",
+                    "apply an eternal sticker to a random",
+                    "{C:attention}Joker{}, {C:mult}+#1#{} Mult for each",
+                    "{C:attention}Joker{} with eternal",
+                    "Currently: {C:mult}+#2#{} Mult"
+                }
+            },
+            j_horror_art = {
+                name = "Art",
+                text = {
+                    "Score over 30% of required {C:attention}Blind",
+                    "Creates a random spectral card"
+                }
+            },
+            j_horror_christie = {
+                name = "Christie",
                 text = {
                     "{C:mult}+#1#{} Mult for each consecutive hand",
                     "discarding {C:hearts}Hearts{} cards resets it",
                     "Currently: {C:mult}+#2#{} Mult"
+                }
+            },
+            j_horror_fred = {
+                name = "Fred",
+                text = {
+                    "{C:attention}+#1#{} Booster slot",
+                     "{C:attention}-#2#{} card slot"
                 }
             },
            j_horror_ghosty = {
@@ -18,32 +42,54 @@ return {
                 text = {
                     "This {C:attention}Joker{} gains {C:chips}+5{} Chips",
                     "When played hand contains a {C:attention}Pair{}",
-                    "{C:inactive}Total Chips: {C:chips}+#1#{}"
+                    "{C:inactive}Currently: {C:chips}+#1#{} Chips"
+                }
+            },
+            j_horror_inky = {
+                name = "Inky",
+                text = {
+                    "Scored 5's of spades each give +15 mult"
+                }
+            },
+             j_horror_jawetto = {
+                name = "Jawetto",
+                text = {
+                    "Sell this {C:attention}Joker{} to instantly defeat {C:attention}Blind{}",
+                    "{C:green}#1# in #2#{} chance of recreating itself ",
+                    "{C:inactive}(Odds increase each sell)"
                 }
             },
             j_horror_jay_bird = {
                 name = "Jay Bird",
                 text = {
                     "This {C:attention}Joker{} gives {C:mult}+#1#{} Mult",
-                    "for a scored {C:attention}10 and 3{} or",
-                    "{C:chips}+#2#{} Chips for a scored {C:attention}6's"
+                    "for scored hands containing a {C:attention}10 and 3{}",
+                    "or {C:chips}+#2#{} Chips for scored {C:attention}6's"
                 }
             },
             j_horror_jigsaw = {
                 name = "Jigsaw",
                 text = {
                     "This {C:attention}Joker{} gains {X:mult,C:white}X.06{} Mult",
-                    "for scored {C:attention}6's{} and",
-                    "{C:green}1 in #2#{} to lose half",
-                    "of money",
-                    "Total: {X:mult,C:white}X#1#{} Mult"
+                    "for scored {C:attention}6's{}",
+                    "{C:green}1 in #2#{} to lose half of money",
+                    "Currently: {X:mult,C:white}X#1#{} Mult"
+                }
+            },
+            j_horror_mikey = {
+                name = "Mikey",
+                text = {
+                    "When a {C:attention}Blind{} is skipped",
+                    "doubles current your{C:gold}money{}",
+                    "but{C:green}#1# in #2#{} chance to destroy",
+                    "a random {C:attention}Joker{}"
                 }
             },
             j_horror_penny = {
                 name = "Penny",
                 text = {
-                    "Retrigger any {C:hearts}Hearts{}",
-                    "card scored an additional",
+                    "Retrigger any scored {C:hearts}Hearts{}",
+                    "cards for an additional",
                     "{C:attention}#1#{} times"
                 }
             },
@@ -52,39 +98,15 @@ return {
                 text = {
                     "{X:mult,C:white}-X#1#{} Mult for each scored",
                     "card in played hands",
-                    "Total: {X:mult,C:white}X#2#{} Mult"
+                    "Currently: {X:mult,C:white}X#2#{} Mult",
+                    "{C:inactive}(Resets each scored hand)"
                 }
             },
             j_horror_xeno = {
                 name = "Xeno",
                 text = {
-                    "When {C:attention}J's and Q's{} are scored",
+                    "When {C:attention}J's{} or {C:attention}Q's{} are scored",
                     "they turn into {C:attention}K's{} "
-                }
-            },
-
-
-            j_horror_mikey = {
-                name = "Mikey",
-                text = {
-                    "When a {C:attention}Blind{} is skipped",
-                    "doubles current your{C:gold}money{}",
-                    "but{C:green}1 in 5{} chance to destroy",
-                    "a random {C:attention}Joker{}"
-                }
-            },
-            j_horror_art = {
-                name = "Art",
-                text = {
-                    "If a {C:attention}Blind{} is defeated",
-                    "in {C:attention}1{} Hand create a",
-                    "random {C:dark_edition}Spectral{} card"
-                }
-            },
-             j_horror_fred = {
-                name = "Fred",
-                text = {
-                    ""
                 }
             },
         },
@@ -155,6 +177,13 @@ return {
                     "{C:dark_edition}Negative{} if possible"
                 }
             },
+            boat = {
+                name = "Bigger Boat",
+                text = {
+                    "Reach {C:green}1 in #1#{}",
+                    "{C:chips}+5{} hand size"
+                }
+            }
         },
         Planet={},
         Spectral={},
