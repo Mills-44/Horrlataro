@@ -47,6 +47,10 @@ SMODS.Joker {
          if context.discard and context.other_card:is_suit("Hearts") then
                 card.ability.extra.mult_gain = 0
                 card.ability.extra.mult_checker = 0
+                return {
+                    message = "Reset!",
+                    colour = G.C.FILTER
+                }
          end
          if context.joker_main then
             card.ability.extra.mult_gain = card.ability.extra.mult_gain + card.ability.extra.mult

@@ -9,8 +9,8 @@ return {
                 name = "AM",
                 text = {
                     "After selecting a {C:attention}Blind{}",
-                    "apply an eternal sticker to a random",
-                    "{C:attention}Joker{}, {C:mult}+#1#{} Mult for each",
+                    "apply an eternal to a random {C:attention}Joker{}",
+                    "{C:mult}+#1#{} Mult for each",
                     "{C:attention}Joker{} with eternal",
                     "Currently: {C:mult}+#2#{} Mult"
                 }
@@ -18,12 +18,11 @@ return {
             j_horror_art = {
                 name = "Art",
                 text = {
-                    "Score over 30% of required {C:attention}Blind",
-                    "Creates a random spectral card"
+                    ""
                 }
             },
-            j_horror_christie = {
-                name = "Christie",
+            j_horror_christy = {
+                name = "Christy",
                 text = {
                     "{C:mult}+#1#{} Mult for each consecutive hand",
                     "discarding {C:hearts}Hearts{} cards resets it",
@@ -40,9 +39,10 @@ return {
            j_horror_ghosty = {
                 name = "Ghosty",
                 text = {
-                    "This {C:attention}Joker{} gains {C:chips}+5{} Chips",
-                    "When played hand contains a {C:attention}Pair{}",
-                    "{C:inactive}Currently: {C:chips}+#1#{} Chips"
+                    "This Joker gains {C:chips}+#1#{} Chips",
+                    "When played hand contains",
+                    "a {C:attention}Pair{}",
+                    "{C:inactive}(Currently: {C:chips}+#2#{C:inactive} Chips)"
                 }
             },
             j_horror_inky = {
@@ -79,18 +79,25 @@ return {
             j_horror_mikey = {
                 name = "Mikey",
                 text = {
-                    "When a {C:attention}Blind{} is skipped",
-                    "doubles current your{C:gold}money{}",
-                    "but{C:green}#1# in #2#{} chance to destroy",
-                    "a random {C:attention}Joker{}"
+                    "Lower {C:attention}Blinds{} by 10%",
+                    "when {C:attention}10's{} are discarded"
                 }
             },
             j_horror_penny = {
                 name = "Penny",
                 text = {
-                    "Retrigger any scored {C:hearts}Hearts{}",
-                    "cards for an additional",
-                    "{C:attention}#1#{} times"
+                    "Retrigger any scored",
+                    "{C:hearts}Hearts{} cards for",
+                    "an additional {C:attention}#1#{} times"
+                }
+            },
+            j_horror_samara = {
+                name = "Samara",
+                text = {
+                    "Any {C:attention}7's{} scored have ",
+                    "a {C:green}#1# in #2#{} chance",
+                    "to earn an enhancement, seal or",
+                    "edition if none applied"
                 }
             },
             j_horror_quiet = {
@@ -183,7 +190,42 @@ return {
                     "Reach {C:green}1 in #1#{}",
                     "{C:chips}+5{} hand size"
                 }
-            }
+            },
+            seven_days = {
+                name = "Seven Days",
+                text = {
+                    "Play hand's containing only {C:attention}7's{} ",
+                    "{C:attention}#1#{} times in a row, Create {C:attention}7 7's{} ",
+                    "with every possible type for a card",
+                    "{C:inactive}(Seal, Edition, Enhancement) (Manifest not included)"
+                }
+            },
+            halloween = {
+                name = "Halloween Night",
+                text = {
+                    "Lower a blind by a total of 50%",
+                    "of original score, create a ",
+                    "{C:attention}Jack-O-Latern Manifest"
+                }
+            },
+            clowning_around = {
+                name = "Clowning Around",
+                text = {
+                    "Score over X3 required {C:attention}Blind", 	
+                    "Reduce Blind by 5-15%",
+                    "Current Reduce: {C:attention}#1#%"
+                }
+            },
+            scream = {
+                name = "Scream I Must",
+                text = {
+                    "If all Jokers are Eternal",
+                    "when {C:attention}Blind{} is",
+                    "selected create a random",
+                    "{C:tarot}Tarot{} card",
+                    "{C:inactive}(Self Not Included)"
+                }
+            },
         },
         Planet={},
         Spectral={},
@@ -196,6 +238,14 @@ return {
                     "Select {C:attention} 1 card",
                     "to give ",
                     "{C:attention}Question Manifest"
+                }
+            },
+             c_horror_halloween_night = {
+                name = "Halloween Night",
+                text = {
+                    "Select {C:attention} 1 card",
+                    "to give ",
+                    "{C:attention}Jack-O-Latern Manifest"
                 }
             },
         },
