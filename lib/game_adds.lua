@@ -3,6 +3,7 @@ HORROR.config = SMODS.current_mod.config
 HORROR.JOKERS = {
 -- ||     COMPLETE      ||
 "am",
+"art",
 "christy",
 "ghosty",
 "jigsaw",

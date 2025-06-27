@@ -8,8 +8,8 @@ return {
              j_horror_am = {
                 name = "AM",
                 text = {
-                    "After selecting a {C:attention}Blind{}",
-                    "apply an eternal to a random {C:attention}Joker{}",
+                    "After selecting a {C:attention}Blind{} apply",
+                    "eternal to a random {C:attention}Joker{}",
                     "{C:mult}+#1#{} Mult for each",
                     "{C:attention}Joker{} with eternal",
                     "Currently: {C:mult}+#2#{} Mult"
@@ -18,7 +18,8 @@ return {
             j_horror_art = {
                 name = "Art",
                 text = {
-                    ""
+                    "Whenever you skip a {C:attention}Booster",
+                    "all Jokers gain {C:gold}$#1#{}"
                 }
             },
             j_horror_christy = {
@@ -211,9 +212,9 @@ return {
             clowning_around = {
                 name = "Clowning Around",
                 text = {
-                    "Score over X3 required {C:attention}Blind", 	
-                    "Reduce Blind by 5-15%",
-                    "Current Reduce: {C:attention}#1#%"
+                    "Every 5th trigger",
+                    "doubles sell value",
+                    "Currently: {C:attention}#1#"
                 }
             },
             scream = {

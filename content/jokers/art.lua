@@ -15,7 +15,8 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            art_total = 0,
+            money = 1,
+            art_double = 0
         },
     },
     rarity = 1,
@@ -30,23 +31,33 @@ SMODS.Joker {
             set = 'Other',
             key = 'clowning_around',
             vars = {
-                card.ability.extra.art_total
+                card.ability.extra.art_double
             }
         }
         return {
             vars = {
+                card.ability.extra.money
             }
         }  
     end,
     calculate = function(self, card, context)
-        if context.end_of_round then
-            local requirement = (G.GAME.blind.chips * 1.3)
-            if requirement == G.GAME.blind.chips then 
-                return {
-                    message = "hi!"
-                }
+        if context.skipping_booster then
+            card.ability.extra.art_double = card.ability.extra.art_double + 1
+            for k, v in ipairs(G.jokers.cards) do
+                if v.set_cost then 
+                    v.ability.extra_value = (v.ability.extra_value or 0) + card.ability.extra.money
+                    v:set_cost()
+                end
+            end
+            if card.ability.extra.art_double == 5 then
+                card.ability.extra.art_double = 0
+                card.ability.extra.money = card.ability.extra.money * 2
+            end
+            return {
+                message = "+$" .. tostring(card.ability.extra.money),
+                colour = G.C.GOLD
+            }
         end
-    end
     end
 }
 
