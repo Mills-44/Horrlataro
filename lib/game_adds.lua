@@ -2,21 +2,19 @@ HORROR.config = SMODS.current_mod.config
 
 HORROR.JOKERS = {
 -- ||     COMPLETE      ||
-"am",
-"art",
 "christy",
 "ghosty",
 "jigsaw",
 "jay_bird",
 "jawetto",
-"mikey",
 "penny",
 "quiet",
 "xeno",
 
 -- ||     WIP      ||
---"samara",
 --"art",
+--"fred",
+--"mikey",
 }
 
 -- Manifests Class Creation 

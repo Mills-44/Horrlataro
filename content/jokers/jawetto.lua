@@ -49,7 +49,8 @@ SMODS.Joker {
             }
         }  
     end,
-    calculate = function(self, card, context)    
+    calculate = function(self, card, context)
+        
     if context.selling_self then
         if (pseudorandom('horror_jawetto') < G.GAME.probabilities.normal / card.ability.extra.tracker ) then
              G.E_MANAGER:add_event(Event({

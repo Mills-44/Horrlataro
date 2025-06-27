@@ -31,8 +31,7 @@ SMODS.Joker {
     config = {
         extra = {
             tracker = 0,
-            chips = 0,
-            chip_pair = 5
+            chips = 0
         }
     },
     rarity = 1,
@@ -52,13 +51,12 @@ SMODS.Joker {
         }
         return {
             vars = {
-                card.ability.extra.chip_pair,
-                card.ability.extra.chips,
+                card.ability.extra.chips
             }
         }  
     end,
     calculate = function(self, card, context)
-        if context.joker_main then
+        if context.joker_main or context.main_scoring then
             local poker_hand_times = (G.GAME.hands[context.scoring_name].played or 0)
             card.ability.extra.tracker = card.ability.extra.tracker + poker_hand_times
             if next(context.poker_hands['Pair']) then
@@ -71,9 +69,6 @@ SMODS.Joker {
             else
                 play_sound('horror_where_am_i')
             end
-            return {
-                chips = card.ability.extra.chips
-            }
        end
        if context.end_of_round and context.cardarea == G.jokers then
         if (pseudorandom('horror_ghosty') < card.ability.extra.tracker / 100 ) then
