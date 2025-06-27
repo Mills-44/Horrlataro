@@ -6,6 +6,56 @@ SMODS.Atlas {
     py   = 95, 
   }
 
-SMODS.Joker {
-
+SMODS.Sound {
+    key  = 'mikey', 
+    path = 'mikey.ogg', 
+    volume = 1.0, 
+    pitch = 1.0 
 }
+
+SMODS.Joker {
+    key = 'mikey',
+    atlas = 'mikey',
+    pos = {
+        x = 0,
+        y = 0
+    },
+    config = {
+        extra = {
+            mike_times = 0
+        },
+    },
+    rarity = 1,
+    cost = 5,
+    unlocked = true,
+    discovered = false, 
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue+1] = {
+            set = 'Other',
+            key = 'halloween',
+            vars = {
+            }
+        }
+        return {
+            vars = {
+            }
+        }  
+    end,
+    calculate = function(self, card, context)
+        if context.discard and context.other_card:get_id() == 10 then
+            G.GAME.blind.chips = G.GAME.blind.chips * 0.9
+			G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+			G.HUD_blind:recalculate()
+            card.ability.extra.mike_times = card.ability.extra.mike_times + 1
+            if card.ability.extra.mike_times == 5 then 
+                card.ability.extra.mike_times = 0
+                play_sound('horror_mikey')
+            end
+        end
+
+    end
+}
+

@@ -34,7 +34,15 @@ SMODS.Consumable {
     end,
     use = function(self, card, area, copier)                                                                                
         for _, v in ipairs(G.hand.highlighted) do
-                HORROR.set_manifest(v, "question")
+            HORROR.set_manifest(v, "question")   
+            G.E_MANAGER:add_event(Event({
+                trigger = 'after', 
+                delay = 0.4, 
+                func = function()
+                    v:juice_up(.3,.5)
+                return true
+                end
+            }))
         end
     end
 }
