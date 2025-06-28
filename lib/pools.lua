@@ -46,16 +46,16 @@ HORROR.BASE_ENHANCEMENT = {
 }
 
 HORROR.BASE_SEALS = {
-    "red",
-    "purple",
-    "blue",
-    "gold"
+    "Red",
+    "Purple",
+    "Blue",
+    "Gold"
 }
 
 HORROR.BASE_EDITIONS = {
     "foil",
     "holo",
-    "poly",
+    "polychrome",
     "negative"
 }
 

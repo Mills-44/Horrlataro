@@ -204,10 +204,11 @@ return {
             seven_days = {
                 name = "Seven Days",
                 text = {
-                    "Play hand's containing only {C:attention}7's{} ",
-                    "{C:attention}#1#{} times in a row, Create {C:attention}7 7's{} ",
+                    "Play hand's containing only {C:attention}7's{}",
+                    "{C:attention}#1#{} times in a row", 
+                    "Create a {C:attention}7{} ",
                     "with every possible type for a card",
-                    "{C:inactive}(Seal, Edition, Enhancement) (Manifest not included)"
+                    "{C:inactive}(Seal, Edition, Enhancement)"
                 }
             },
             halloween = {

@@ -51,6 +51,10 @@ SMODS.Joker {
             if card.ability.extra.tracker == 0 then
                 card.ability.extra.retrig = card.ability.extra.retrig + 2
                 card.ability.extra.tracker = 3
+                return {
+                message = "+2 Triggers!",
+                colour = G.C.FILTER
+            }
             end
         end
     end

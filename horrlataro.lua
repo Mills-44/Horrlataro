@@ -14,12 +14,21 @@ SMODS.load_file("lib/ui.lua")() -- UI
 SMODS.load_file("lib/manifest_util.lua")()
 SMODS.load_file("lib/pools.lua")()
 
+-- Load Cross Mod Compats
+--if JokerDisplay then
+--SMODS.load_file("crossmods/joker_display.lua")()
+--end
+
 -- Lovely Fixes
 SMODS.load_file("lovely/fixes.toml")
 
 -- Load Killer Jokers
 HORROR.file_loader(HORROR.JOKERS, "content/jokers")
+
+-- Load Tasks
 HORROR.file_loader(HORROR.TASKS, "content/tasks")
+
+-- Load Manifests
 HORROR.file_loader(HORROR.MANIFESTS, "content/manifests")
 
 -- Task Consumable Type

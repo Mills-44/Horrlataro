@@ -64,6 +64,10 @@ SMODS.Joker {
                 if card.ability.extra.blind_left == 0 then
                     G.jokers.config.card_limit = G.jokers.config.card_limit + 1
                 end
+                return {
+                message = "+1 Card Slot!",
+                colour = G.C.FILTER
+            }
             end
         end
 end
