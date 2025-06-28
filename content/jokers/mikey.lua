@@ -53,9 +53,19 @@ SMODS.Joker {
             if card.ability.extra.mike_times == 5 then 
                 card.ability.extra.mike_times = 0
                 play_sound('horror_mikey')
+                G.E_MANAGER:add_event(Event({
+                    trigger = 'after', 
+                    delay = 0.4, 
+                    func = function()
+                    local card = create_card('Task', G.consumeables, nil, nil, nil, nil, nil, 'c_horror_halloween_night')       
+                    card:add_to_deck()
+                    G.consumeables:emplace(card)
+                    card:juice_up(0.3, 0.5) 
+        return true
+    end
+    }))
             end
         end
-
     end
 }
 

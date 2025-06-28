@@ -119,6 +119,7 @@ return {
             },
         },
         Other={
+            -- MANIFESTS
             horror_question_manifest = {
                 name = "Question Mark",
                 text = {
@@ -128,6 +129,14 @@ return {
                     "Total {C:mult}+#1#{} Mult",
                 }
             },
+            horror_jack_o_lantern_manifest = {
+                name = "Jack-O-Lantern",
+                text = {
+                    "Reduces {C:attention}Blind{} by",
+                    "5-15% when scored"
+                }
+            },
+            -- TASKS
             pop_quiz = {
                 name = "Pop Quiz",
                 text = {

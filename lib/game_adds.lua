@@ -39,9 +39,11 @@ HORROR.Manifest = SMODS.Sticker:extend{
 }
 
 HORROR.TASKS = {
-"pop_quiz"
+"pop_quiz",
+"halloween_night",
 }
---- @alias Manifest "question" 
+--- @alias Manifest "question" | "jack_o_lantern"
 HORROR.MANIFESTS = {
-"question_manifest"
+"question_manifest",
+"jack_o_lantern_manifest"
 }
