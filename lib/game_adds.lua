@@ -11,11 +11,15 @@ HORROR.JOKERS = {
 "jawetto",
 "mikey",
 "penny",
+"pinwie",
 "quiet",
 "samara",
 "xeno",
 
 -- ||     WIP      ||
+--"cujo",
+--"carrie",
+--"inky",
 }
 
 -- Manifests Class Creation 

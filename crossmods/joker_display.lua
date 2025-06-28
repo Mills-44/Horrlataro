@@ -115,107 +115,117 @@ jd_def["j_horror_jawetto"] = {
 
 jd_def["j_horror_jay_bird"] = {
     text = {
-
-    },
+        {
+            text = "+",
+            colour = G.C.CHIPS,
+        },
+        {
+        ref_table = "card.ability.extra",
+        ref_value = "chips",
+        colour = G.C.CHIPS,
+        },
+        {
+            text = ", ",
+        },
+        {
+            text = "+",
+            colour = G.C.MULT,
+        },
+        {
+        ref_table = "card.ability.extra",
+        ref_value = "mult",
+        colour = G.C.MULT,
+        },
+    }, 
     reminder_text = {
-
+        {
+            text = "(10 & 3) or 6"
+        }
     },
     reminder_text_config = {
-
+        colour = G.C.UI.TEXT_INACTIVE,
     },
-    calc_function = function(card)
-
-    end
 }
 
 jd_def["j_horror_jigsaw"] = {
     text = {
-
+        { 
+            ref_table = "card.joker_display_values", 
+            ref_value = "count", 
+            retrigger_type = "mult" 
+        },
+        { 
+            text = "x",                              
+            scale = 0.35 
+        },
+        {
+            border_nodes = {
+                { 
+                    text = "X" 
+                },
+                { 
+                    ref_table = "card.ability.extra", 
+                    ref_value = "xmult" 
+                }
+            }
+        }
     },
-    reminder_text = {
-
-    },
-    reminder_text_config = {
-
-    },
-    calc_function = function(card)
-
-    end
 }
 
-jd_def["j_horror_mikey"] = {
-    text = {
-
-    },
-    reminder_text = {
-
-    },
-    reminder_text_config = {
-
-    },
-    calc_function = function(card)
-
-    end
-}
+jd_def["j_horror_mikey"] = {}
 
 jd_def["j_horror_penny"] = {
-    text = {
-
-    },
     reminder_text = {
-
+        text = {
+            {
+                text = "Hearts",
+                colour = G.C.SUITS.Hearts
+            }
+        }
     },
-    reminder_text_config = {
-
-    },
-    calc_function = function(card)
-
-    end
 }
 
 jd_def["j_horror_quiet"] = {
     text = {
-
+        { 
+            ref_table = "card.joker_display_values", 
+            ref_value = "count", 
+            retrigger_type = "mult" 
+        },
+        { 
+            text = "x",                              
+            scale = 0.35 
+        },
+        {
+            border_nodes = {
+                { 
+                    text = "X" 
+                },
+                { 
+                    ref_table = "card.ability.extra", 
+                    ref_value = "xmult" 
+                }
+            }
+        }
     },
-    reminder_text = {
-
-    },
-    reminder_text_config = {
-
-    },
-    calc_function = function(card)
-
-    end
 }
 
 jd_def["j_horror_samara"] = {
     text = {
-
+        {
+            text = "7",
+            colour = G.C.FILTER
+        }
     },
-    reminder_text = {
-
-    },
-    reminder_text_config = {
-
-    },
-    calc_function = function(card)
-
-    end
 }
 
 jd_def["j_horror_xeno"] = {
     text = {
-
+        {
+            text = "(Q's and K's)",
+            colour = G.C.UI.TEXT_INACTIVE
+        }
     },
-    reminder_text = {
-
-    },
-    reminder_text_config = {
-
-    },
-    calc_function = function(card)
-
-    end
 }
 
 jd_def["j_horror_"] = {

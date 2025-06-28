@@ -15,9 +15,9 @@ SMODS.load_file("lib/manifest_util.lua")()
 SMODS.load_file("lib/pools.lua")()
 
 -- Load Cross Mod Compats
---if JokerDisplay then
---SMODS.load_file("crossmods/joker_display.lua")()
---end
+if JokerDisplay then
+    SMODS.load_file("crossmods/joker_display.lua")()
+end
 
 -- Lovely Fixes
 SMODS.load_file("lovely/fixes.toml")

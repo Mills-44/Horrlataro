@@ -30,13 +30,6 @@ return {
                     "Currently: {C:mult}+#2#{} Mult"
                 }
             },
-            j_horror_fred = {
-                name = "Fred",
-                text = {
-                    "{C:attention}+#1#{} Booster slot",
-                     "{C:attention}-#2#{} card slot"
-                }
-            },
            j_horror_ghosty = {
                 name = "Ghosty",
                 text = {
@@ -90,6 +83,13 @@ return {
                     "Retrigger any scored",
                     "{C:hearts}Hearts{} cards for",
                     "an additional {C:attention}#1#{} times"
+                }
+            },
+            j_horror_pinwie = {
+                name = "Pinwie",
+                text = {
+                    "{C:attention}+#1#{} Booster slot",
+                    "{C:attention}-#2#{} card slot"
                 }
             },
             j_horror_samara = {
@@ -235,6 +235,13 @@ return {
                     "selected create a random",
                     "{C:tarot}Tarot{} card",
                     "{C:inactive}(Self Not Included)"
+                }
+            },
+            box = {
+                name = "Open The Box",
+                text = {
+                    "Open {C:attention}#1#{} Boosters",
+                    "{C:attention}+1{} Booster or Card Slot"
                 }
             },
         },
