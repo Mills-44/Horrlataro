@@ -282,6 +282,7 @@ return {
         high_scores={},
         labels={
             horror_question_manifest = "Manifest",
+            horror_halloween_night_manifest = "Manifest",
         },
         poker_hand_descriptions={},
         poker_hands={},
