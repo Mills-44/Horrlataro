@@ -44,118 +44,60 @@ SMODS.Joker {
         }
         return {
             vars = {
-                (G.GAME.probabilities.normal or 1),
+               (G.GAME.probabilities.normal or 1),
                 card.ability.extra.ring_activate,
             }
         }  
     end,
     calculate = function(self, card, context)
+        local seven_checker = true
         if context.before then
-            for i, v in ipairs(context.full_hand) do
-                if v:get_id() == 2 or 
-                   v:get_id() == 3 or 
-                   v:get_id() == 4 or
-                   v:get_id() == 5 or
-                   v:get_id() == 6 or
-                   v:get_id() == 8 or
-                   v:get_id() == 9 or
-                   v:get_id() == 10 or
-                   v:get_id() == 11 or
-                   v:get_id() == 12 or
-                   v:get_id() == 13 or
-                   v:get_id() == 14 then 
-                    return false                   
-                   else
-                card.ability.extra.checker = card.ability.extra.checker - 1
-                return true
-            end
-        end
-        if card.ability.extra.checker == 0 then
-            card.ability.extra.checker = 7
-            G.E_MANAGER:add_event(Event({
-                    trigger = 'after', 
-                    delay = 0.15,
-                    func = function()
-                        local newcard1 SMODS.add_card {
-                        set = 'Playing Card',              
-                        }
-                        local newcard2 SMODS.add_card {
-                        set = 'Playing Card',              
-                        }
-                        local newcard3 SMODS.add_card {
-                        set = 'Playing Card',              
-                        }
-                        local newcard4 SMODS.add_card {
-                        set = 'Playing Card',              
-                        }
-                        local newcard5 SMODS.add_card {
-                        set = 'Playing Card',              
-                        }
-                        local newcard6 SMODS.add_card {
-                        set = 'Playing Card',              
-                        }
-                        local newcard7 SMODS.add_card {
-                        set = 'Playing Card',              
-                        }
-                        local chosen_enhancement = pseudorandom_element(HORROR.BASE_ENHANCEMENT, pseudoseed('choice'))
-                        local edition = pseudorandom_element(HORROR.BASE_EDITIONS, pseudoseed('christy_joker'))
-                        local chosen_seal = pseudorandom_element(HORROR.BASE_SEALS, pseudoseed('choice'))
-                        
-                        newcard1:set_ability("m_" .. chosen_enhancement)
-                        newcard1:set_edition("e_" .. edition, nil, true)
-                        newcard1:set_seal(chosen_seal, nil, true)
-                        
-                        newcard2:set_ability("m_" .. chosen_enhancement)
-                        newcard2:set_edition("e_" .. edition, nil, true)
-                        newcard2:set_seal(chosen_seal, nil, true)
-                        
-                        newcard3:set_ability("m_" .. chosen_enhancement)
-                        newcard3:set_edition("e_" .. edition, nil, true)
-                        newcard3:set_seal(chosen_seal, nil, true)
-
-                        newcard4:set_ability("m_" .. chosen_enhancement)
-                        newcard4:set_edition("e_" .. edition, nil, true)
-                        newcard4:set_seal(chosen_seal, nil, true)
-
-                        newcard5:set_ability("m_" .. chosen_enhancement)
-                        newcard5:set_edition("e_" .. edition, nil, true)
-                        newcard5:set_seal(chosen_seal, nil, true)
-
-                        newcard6:set_ability("m_" .. chosen_enhancement)
-                        newcard6:set_edition("e_" .. edition, nil, true)
-                        newcard6:set_seal(chosen_seal, nil, true)
-
-                        newcard7:set_ability("m_" .. chosen_enhancement)
-                        newcard7:set_edition("e_" .. edition, nil, true)
-                        newcard7:set_seal(chosen_seal, nil, true)
-                    return true
+            for i, v in ipairs(context.scoring_hand) do
+                if not card:get_id() == 7 then
+                    seven_checker = false
                 end
-                }))
-        end
-    end
-        if context.individual and context.cardarea == G.play then
-            local seven = context.other_card
-            if seven:get_id() == 7 then
-                if (pseudorandom('horror_samara') < G.GAME.probabilities.normal / card.ability.extra.ring_activate ) then
-                    if SMODS.has_enhancement(seven, nil) then
-                        local chosen_enhancement = pseudorandom_element(HORROR.BASE_ENHANCEMENT, pseudoseed('choice'))
-                        seven:set_ability("m_" .. chosen_enhancement)
-                    elseif seven.edition == nil then 
-                        local edition = pseudorandom_element(HORROR.BASE_EDITIONS, pseudoseed('christy_joker'))
-                        seven:set_edition("e_" .. edition, nil, true)
-                    else
-                        local chosen_seal = pseudorandom_element(HORROR.BASE_SEALS, pseudoseed('choice'))
-                        seven:set_seal(chosen_seal, nil, true)
-                    end
+            end
+            if seven_checker then 
+                card.ability.extra.checker = card.ability.extra.checker - 1
+                if card.ability.extra.checker == 0 then
+                    card.ability.extra.checker = 7
                     G.E_MANAGER:add_event(Event({
-                    trigger = 'after', 
-                    delay = 0.15,
-                    func = function()
-                        play_sound('timpani')
-                        seven:juice_up(0.3, 0.3)
+                        trigger = 'after',
+                        delay = 0.4,
+                        func = function()
+                            local edition = HORROR.BASE_EDITIONS[math.random(#HORROR.BASE_EDITIONS)]
+                            local seal = HORROR.BASE_SEALS[math.random(#HORROR.BASE_SEALS)]
+                            local card = SMODS.create_card({
+                                set = 'Playing Card',
+                                area = G.hand,
+                                rank = '7',
+                                edition = "e_".. edition,
+                                seal = seal, 
+                                enhanced_poll = 0.0001
+                            })
+                            card:set_seal(seal, true)
+                            card:add_to_deck()
+                            G.hand:emplace(card)
+                            card:juice_up(0.3, 0.5)
                         return true
                     end
                 }))
+                end
+            end
+        end
+        if context.individual and context.cardarea == G.play then
+            if context.other_card:get_id() == 7 then
+                if (pseudorandom('horror_samara') < G.GAME.probabilities.normal / card.ability.extra.ring_activate ) then
+                    if HORROR.random_chance(.33) then
+                        local seal = pseudorandom_element(HORROR.BASE_SEALS, pseudoseed('samara_seal'))
+                        context.other_card:set_seal(seal, true)
+                    elseif HORROR.random_chance(.66) then
+                        local edition = pseudorandom_element(HORROR.BASE_EDITIONS, pseudoseed('samara_edition'))
+                        context.other_card:set_edition("e_" .. edition, nil, true)
+                    else
+                        local enhancement = pseudorandom_element(HORROR.BASE_ENHANCEMENT, pseudoseed('samara_enhance'))
+                        context.other_card:set_edition("m_" .. enhancement, nil, true)
+                    end                 
                 end
             end
         end
