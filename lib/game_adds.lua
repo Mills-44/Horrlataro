@@ -2,19 +2,24 @@ HORROR.config = SMODS.current_mod.config
 
 HORROR.JOKERS = {
 -- ||     COMPLETE      ||
+"am",
+"art",
 "christy",
 "ghosty",
 "jigsaw",
 "jay_bird",
 "jawetto",
+"mikey",
 "penny",
+"pinwie",
 "quiet",
+"samara",
 "xeno",
 
 -- ||     WIP      ||
---"art",
---"fred",
---"mikey",
+--"cujo",
+--"carrie",
+--"inky",
 }
 
 -- Manifests Class Creation 
@@ -37,9 +42,11 @@ HORROR.Manifest = SMODS.Sticker:extend{
 }
 
 HORROR.TASKS = {
-"pop_quiz"
+"pop_quiz",
+"halloween_night",
 }
---- @alias Manifest "question" 
+--- @alias Manifest "question" | "jack_o_lantern"
 HORROR.MANIFESTS = {
-"question_manifest"
+"question_manifest",
+"jack_o_lantern_manifest"
 }

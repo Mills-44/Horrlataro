@@ -1,20 +1,20 @@
 -- LOAD ATLAS/SOUNDS FOR JOKER
 SMODS.Atlas {
-    key  = 'pop_quiz',
-    path = 'pop_quiz.png',
+    key  = 'halloween_night',
+    path = 'halloween_night.png',
     px   = 71, 
     py   = 95, 
   }
   SMODS.Atlas {
-    key  = 'question_mark',
-    path = 'question_mark.png',
+    key  = 'jack_o_lantern',
+    path = 'jack_o_lantern.png',
     px   = 71, 
     py   = 95, 
   }
   
 SMODS.Consumable {
-    key = 'pop_quiz',
-    atlas = 'pop_quiz',
+    key = 'halloween_night',
+    atlas = 'halloween_night',
     set = "Task",
     pos = {
         x = 0,
@@ -34,7 +34,7 @@ SMODS.Consumable {
     end,
     use = function(self, card, area, copier)                                                                                
         for _, v in ipairs(G.hand.highlighted) do
-            HORROR.set_manifest(v, "question")   
+            HORROR.set_manifest(v, "jack_o_lantern")   
             G.E_MANAGER:add_event(Event({
                 trigger = 'after', 
                 delay = 0.4, 
