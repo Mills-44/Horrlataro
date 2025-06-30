@@ -102,3 +102,9 @@ HORROR.TAROT = {
     "judgement",
     "world"
 }
+
+HORROR.HALLOWEEN_DECK = {
+    "10",
+    "3",
+    "Ace"
+}

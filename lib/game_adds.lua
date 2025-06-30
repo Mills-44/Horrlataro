@@ -22,6 +22,11 @@ HORROR.JOKERS = {
 --"inky",
 }
 
+HORROR.DECKS = {
+  "halloween",
+  
+}
+
 -- Manifests Class Creation 
 HORROR.Manifest = SMODS.Sticker:extend{
     prefix_config = { key = true },

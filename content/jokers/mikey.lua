@@ -57,7 +57,7 @@ SMODS.Joker {
                     trigger = 'after', 
                     delay = 0.4, 
                     func = function()
-                    local card = create_card('Task', G.consumeables, nil, nil, nil, nil, nil, 'c_horror_halloween_night')       
+                    local card = create_card('Task', G.consumeables, nil, nil, nil, nil, 'c_horror_halloween_night')       
                     card:add_to_deck()
                     G.consumeables:emplace(card)
                     card:juice_up(0.3, 0.5) 

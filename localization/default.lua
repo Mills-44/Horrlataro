@@ -1,6 +1,14 @@
 return {
     descriptions = {
-        Back={},
+        Back={
+          b_horror_halloween_deck = {
+                name = "Halloween Deck",
+                text = {
+                    "Start with a Deck",
+                    "full of {C:attention}10's, 3's, & Aces"
+                }
+            },  
+        },
         Blind={},
         Edition={},
         Enhanced={},
@@ -282,6 +290,7 @@ return {
         high_scores={},
         labels={
             horror_question_manifest = "Manifest",
+            horror_halloween_night_manifest = "Manifest",
         },
         poker_hand_descriptions={},
         poker_hands={},

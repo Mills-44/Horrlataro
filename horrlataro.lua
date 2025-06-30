@@ -25,6 +25,9 @@ SMODS.load_file("lovely/fixes.toml")
 -- Load Killer Jokers
 HORROR.file_loader(HORROR.JOKERS, "content/jokers")
 
+-- Load Decks
+HORROR.file_loader(HORROR.DECKS, "content/decks")
+
 -- Load Tasks
 HORROR.file_loader(HORROR.TASKS, "content/tasks")
 
