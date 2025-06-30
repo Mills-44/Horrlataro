@@ -28,6 +28,9 @@ HORROR.file_loader(HORROR.JOKERS, "content/jokers")
 -- Load Decks
 HORROR.file_loader(HORROR.DECKS, "content/decks")
 
+-- Load Vouchers
+HORROR.file_loader(HORROR.VOUCHERS, "content/vouchers")
+
 -- Load Tasks
 HORROR.file_loader(HORROR.TASKS, "content/tasks")
 

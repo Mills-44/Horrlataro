@@ -5,7 +5,7 @@ return {
                 name = "Halloween Deck",
                 text = {
                     "Start with a Deck",
-                    "full of {C:attention}10's, 3's, & Aces"
+                    "full of {C:attention}10's, 3's,{} & {C:attention}Aces"
                 }
             },  
         },
@@ -276,7 +276,21 @@ return {
             },
         },
         Tarot={},
-        Voucher={},
+        Voucher={
+            v_horror_puzzle_box = {
+                name = "Puzzle Box",
+                text = {
+                    "{C:attention}+1{} Booster Slot"
+                },
+            },
+            v_horror_decipher = {
+                name = "Decipher",
+                text = {
+                    "{C:chips}+1{} Joker Slot",
+                    "{C:tarot}+1{} Consumable Slot"
+                },
+            },
+        },
     },
     misc = {
         achievement_descriptions={},

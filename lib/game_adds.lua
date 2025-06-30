@@ -24,7 +24,10 @@ HORROR.JOKERS = {
 
 HORROR.DECKS = {
   "halloween",
-  
+}
+
+HORROR.VOUCHERS = {
+  "puzzle_box", "decipher",
 }
 
 -- Manifests Class Creation 
