@@ -16,6 +16,17 @@ return {
                     "and {C:attention}Pinwie Joker"
                 }
             },
+            b_horror_harvest_deck = {
+                name = "Harvest Deck",
+                text = {
+                    "Start with a Deck",
+                    "full of cards with",
+                    "a random modification",
+                    "{C:inactive}(Enhancement, Seal,", 
+                    "{C:inactive}Edition, or Mainifest)"
+                    
+                }
+            },
         },
         Blind={},
         Edition={},

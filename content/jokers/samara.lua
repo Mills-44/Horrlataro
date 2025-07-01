@@ -96,7 +96,7 @@ SMODS.Joker {
                         context.other_card:set_edition("e_" .. edition, nil, true)
                     else
                         local enhancement = pseudorandom_element(HORROR.BASE_ENHANCEMENT, pseudoseed('samara_enhance'))
-                        context.other_card:set_edition("m_" .. enhancement, nil, true)
+                        context.other_card:set_ability("m_" .. enhancement, nil, true)
                     end                 
                 end
             end
