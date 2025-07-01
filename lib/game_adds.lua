@@ -24,6 +24,7 @@ HORROR.JOKERS = {
 
 HORROR.DECKS = {
   "halloween",
+  "frenzy"
 }
 
 HORROR.VOUCHERS = {

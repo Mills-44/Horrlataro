@@ -7,7 +7,15 @@ return {
                     "Start with a Deck",
                     "full of {C:attention}10's, 3's,{} & {C:attention}Aces"
                 }
-            },  
+            },
+            b_horror_frenzy_deck = {
+                name = "Frenzy Deck",
+                text = {
+                    "Start run with the",
+                    "{C:attention} Puzzle Box{} voucher",
+                    "and {C:attention}Pinwie Joker"
+                }
+            },
         },
         Blind={},
         Edition={},
@@ -280,13 +288,13 @@ return {
             v_horror_puzzle_box = {
                 name = "Puzzle Box",
                 text = {
-                    "{C:attention}+1{} Booster Slot"
+                    "{C:attention}+1{} Joker Slot"
                 },
             },
             v_horror_decipher = {
                 name = "Decipher",
                 text = {
-                    "{C:chips}+1{} Joker Slot",
+                    "{C:attention}+1{} Joker Slot",
                     "{C:tarot}+1{} Consumable Slot"
                 },
             },

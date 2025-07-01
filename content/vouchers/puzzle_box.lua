@@ -27,7 +27,7 @@ SMODS.Voucher {
     redeem = function(self)
 		G.E_MANAGER:add_event(Event({
 			func = function()
-				SMODS.change_booster_limit(1)
+				G.jokers.config.card_limit = G.jokers.config.card_limit + 1
 				return true
 			end,
 		}))
