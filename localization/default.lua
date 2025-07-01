@@ -19,7 +19,7 @@ return {
                 name = "Art",
                 text = {
                     "Whenever you skip a {C:attention}Booster",
-                    "all Jokers gain {C:gold}$#1#{}"
+                    "all Jokers gain {C:gold}$#1#{} in sell value"
                 }
             },
             j_horror_christy = {
